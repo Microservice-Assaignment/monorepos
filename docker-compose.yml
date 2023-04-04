@@ -1,0 +1,42 @@
+version: "3.5"
+
+services:
+  react-app:
+    image: keanthai/react-app:latest
+    ports:
+      - 6001:3000
+    deploy:
+      mode: replicated
+      replicas: 2
+      update_config:
+        parallelism: 1
+        order: start-first
+        failure_action: rollback
+      restart_policy:
+        condition: on-failure
+  node-app:
+    image: keanthai/node-app:latest
+    ports:
+      - 6004:8080
+    deploy:
+      mode: replicated
+      replicas: 2
+      update_config:
+        parallelism: 1
+        order: start-first
+        failure_action: rollback
+      restart_policy:
+        condition: on-failure
+  html-app:
+    image: keanthai/html-app:latest
+    ports:
+      - 6003:80
+    deploy:
+      mode: replicated
+      replicas: 2
+      update_config:
+        parallelism: 1
+        order: start-first
+        failure_action: rollback
+      restart_policy:
+        condition: on-failure
