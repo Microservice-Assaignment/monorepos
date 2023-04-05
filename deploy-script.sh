@@ -13,5 +13,5 @@ do
     docker build -t keanthai/$ARG:latest .
     docker push keanthai/$ARG:latest
     cd ..
-    ./start.sh
 done
+./start.sh
