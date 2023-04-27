@@ -4,7 +4,7 @@ ARGS=("$*")
 # workingDir="/microservice/monorepos/microservices"
 workingDir="./microservices"
 docker login -u keanthai -p keanthaihub
-# docker build -t keanthai/haproxy:latest ./haproxy
+docker build -t keanthai/haproxy:latest ./haproxy
 
 deploying(){
     cd "${workingDir}/$1"

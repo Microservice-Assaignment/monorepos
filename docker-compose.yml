@@ -27,10 +27,10 @@ services:
         failure_action: rollback
       restart_policy:
         condition: on-failure
-  # haproxy:
-  #   image: keanthai/haproxy:latest
-  #   ports:
-  #     - 80:80
+  haproxy:
+    image: keanthai/haproxy:latest
+    ports:
+      - 80:80
   # node-app:
   #   image: keanthai/node:latest
   #   ports:
