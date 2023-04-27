@@ -13,7 +13,7 @@ deploying(){
     docker build -t keanthai/$1:latest .
     docker push keanthai/$1:latest
 }
-if [ $ARGS = all ]; 
+if [[ $ARGS == all ]]; 
 then
     for app in `${workingDir}/`
     do
@@ -25,4 +25,5 @@ else
         deploying "${ARG}"
     done
 fi
+cd ../..
 ./start.sh
