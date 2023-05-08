@@ -12,10 +12,11 @@ deploying(){
     git pull
     docker build -t keanthai/$1:latest .
     docker push keanthai/$1:latest
+    cd ../..
 }
 if [[ $ARGS == all ]]; 
 then
-    for app in `${workingDir}/`
+    for app in `${workingDir}/*`
     do
         deploying "${app}"
     done
@@ -25,5 +26,4 @@ else
         deploying "${ARG}"
     done
 fi
-cd ../..
 ./start.sh
