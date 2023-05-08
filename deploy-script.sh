@@ -4,7 +4,7 @@ ARGS=("$*")
 workingDir="./microservices"
 docker login -u keanthai -p keanthaihub
 # docker build -t keanthai/haproxy:latest ./haproxy
-docker build -t keanthai/int-haproxy:latest ./haproxy/int-haproxy/usr/local/etc/haproxy
+docker build -t keanthai/int-haproxy:latest ./haproxy/int-haproxy
 docker push keanthai/int-haproxy:latest
 
 deploying(){
