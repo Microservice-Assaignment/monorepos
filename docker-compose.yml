@@ -31,6 +31,10 @@ services:
     image: keanthai/int-haproxy:latest
     ports:
       - 80:80
+    deploy:
+      mode: global
+      update_config: 
+        order: start-last
   # node-app:
   #   image: keanthai/node:latest
   #   ports:
