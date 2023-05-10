@@ -1,1 +1,1 @@
-docker build -t int_haproxy:latest .
+docker build -t keanthai/int_haproxy:0.0.1 .

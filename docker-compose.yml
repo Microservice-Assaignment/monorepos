@@ -28,7 +28,7 @@ services:
       restart_policy:
         condition: on-failure
   haproxy:
-    image: keanthai/int-haproxy:latest
+    image: keanthai/int_haproxy:0.0.1
     ports:
       - 80:80
     deploy:
