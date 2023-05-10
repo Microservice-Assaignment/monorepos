@@ -14,16 +14,17 @@ deploying(){
     docker push keanthai/$1:latest
     cd ../..
 }
-if [[ $ARGS == all ]]; 
-then
-    for app in `${workingDir}/*`
-    do
-        deploying "${app}"
-    done
-else
-    for ARG in $ARGS
-    do 
-        deploying "${ARG}"
-    done
-fi
+deploying "htmlapp"
+# if [[ $ARGS == all ]]; 
+# then
+#     for app in `${workingDir}/*`
+#     do
+#         deploying "${app}"
+#     done
+# else
+#     for ARG in $ARGS
+#     do 
+#         deploying "${ARG}"
+#     done
+# fi
 ./start.sh
