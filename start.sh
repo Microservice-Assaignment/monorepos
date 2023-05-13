@@ -1,1 +1,1 @@
-docker stack deploy node --compose-file docker-compose.yml --with-registry-auth --prune
+docker stack deploy node --compose-file docker-compose.yml --with-registry-auth #--prune
